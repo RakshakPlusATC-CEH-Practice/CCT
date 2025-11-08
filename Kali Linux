@@ -1,0 +1,132 @@
+# 🛡️ RakshakPlus Kali Linux Lab Manual
+
+Welcome to the **Kali Linux Lab Manual** designed for students participating in the **RakshakPlus Cybersecurity Awareness Program**. This guide provides hands-on labs to build foundational ethical hacking and cybersecurity skills using Kali Linux in a safe, legal environment.
+
+---
+
+## 📘 Overview
+
+Kali Linux is a powerful platform for penetration testing and digital forensics. This manual walks you through installation, basic Linux usage, and essential cybersecurity tools.
+
+---
+
+## 🧰 Prerequisites
+
+- Basic knowledge of Linux commands
+- System with 4 GB+ RAM and 20 GB+ disk space
+- VirtualBox or VMware installed
+- Kali Linux ISO: [Download here](https://www.kali.org/get-kali/)
+
+---
+
+## 🧪 Labs
+
+### Lab 1: Installing Kali Linux in VirtualBox
+
+1. Download Kali ISO.
+2. Create VM in VirtualBox:
+   - Name: `Kali-Linux`
+   - Type: Linux → Debian (64-bit)
+   - RAM: 2–4 GB
+   - Disk: 20 GB (VDI, dynamically allocated)
+3. Mount ISO → Start VM → Graphical Install
+4. Set:
+   - Hostname: `kali`
+   - Username: `student`
+   - Password: `rakshakplus`
+5. Partition disk → Finish install → Reboot → Login
+
+---
+
+### Lab 2: Basic Linux Commands
+
+```bash
+whoami
+pwd
+ls -l
+cd /etc
+cat passwd
+mkdir test && cd test
+touch file.txt
+nano file.txt
+```
+
+✅ Objective: Understand file system navigation and basic file operations.
+
+---
+
+### Lab 3: Network Scanning with Nmap
+
+```bash
+ifconfig
+nmap -sn 192.168.1.0/24
+nmap -sV 192.168.1.1
+```
+
+✅ Objective: Identify active hosts and open ports.
+
+---
+
+### Lab 4: Password Cracking with John the Ripper
+
+```bash
+sudo unshadow /etc/passwd /etc/shadow > mypasswd
+john mypasswd
+john --show mypasswd
+```
+
+✅ Objective: Understand password hashing and cracking basics.
+
+---
+
+### Lab 5: Web Vulnerability Scanning with Nikto
+
+```bash
+nikto -h http://testphp.vulnweb.com
+```
+
+✅ Objective: Scan a test website for vulnerabilities.
+
+---
+
+### Lab 6: Social Engineering Toolkit (SET)
+
+```bash
+sudo setoolkit
+```
+
+- Choose: Social-Engineering Attacks → Credential Harvester
+- Host a fake login page and test in browser
+
+✅ Objective: Learn phishing techniques in a controlled lab.
+
+---
+
+### Lab 7: Wireshark Packet Analysis
+
+1. Open Wireshark
+2. Start capture on `eth0`
+3. Visit a website
+4. Stop capture → Filter: `http`
+
+✅ Objective: Analyze network traffic and protocols.
+
+---
+
+## 🔐 Ethics & Safety
+
+> These labs are for **educational purposes only**. Never use these tools on real systems or networks without explicit permission.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from RakshakPlus students and educators! Feel free to fork, improve, and submit pull requests.
+
+---
+
+## 🙌 Maintained by
+
+**RakshakPlus Cybersecurity Awareness Team**  
+Empowering students with ethical hacking and digital safety skills.
+
